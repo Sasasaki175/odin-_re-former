@@ -13,6 +13,9 @@
     <input type="submit" value="Submit">
   </form>
   -->
+  <% @user.errors.full_messages.each do |message| %>
+    <div style="color: red;"><%= message %></div>
+  <% end %>
   <%= form_with model: @user do |form| %>
     <%= form.label :name, "Input your user name here:" %>
     <%= form.text_field :name, value: "John Smith" %><br>

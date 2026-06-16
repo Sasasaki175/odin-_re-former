@@ -13,6 +13,9 @@
   <input type="submit" value="Submit">
 </form>
 -->
+<% @user.errors.full_messages.each do |message| %>
+  <div style="color: red;"><%= message %></div>
+<% end %>
 Edit user info
 <%= form_with model: @user do |form| %>
   <%= form.label :name, "Username:" %>
