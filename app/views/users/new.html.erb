@@ -14,10 +14,10 @@
   </form>
   -->
   <%= form_with model: @user do |form| %>
-    <%= form.label :name, "Name:" %>
-    <%= form.text_field :name %><br>
+    <%= form.label :name, "Input your user name here:" %>
+    <%= form.text_field :name, value: "John Smith" %><br>
     <%= form.label :email, "Email:" %>
-    <%= form.text_field :email %><br>
+    <%= form.email_field :email, placeholder: "example@example.com" %><br>
     <%= form.label :password, "Password" %>
     <%= form.password_field :password %><br>
     <%= form.submit "Submit" %>
